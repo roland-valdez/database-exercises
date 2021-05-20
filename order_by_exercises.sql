@@ -9,10 +9,10 @@ ORDER BY first_name;
 -- OR first_name IN ('Vidya')
 -- OR first_name IN ('Maya'))
 -- ORDER BY first_name;
-SELECT * FROM employees WHERE last_name LIKE 'E%'
-AND  (last_name LIKE '%E');
-SELECT * FROM employees WHERE last_name LIKE 'E%'
-AND  (last_name LIKE '%E')
-ORDER BY emp_no;
+-- SELECT * FROM employees WHERE last_name LIKE 'E%'
+-- AND  (last_name LIKE '%E');
+-- SELECT * FROM employees WHERE last_name LIKE 'E%'
+-- AND  (last_name LIKE '%E')
+-- ORDER BY emp_no;
 -- SELECT last_name FROM employees WHERE last_name LIKE '%q%'
 -- AND last_name NOT LIKE '%qu%';
