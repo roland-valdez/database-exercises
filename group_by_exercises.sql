@@ -12,6 +12,7 @@ FROM employees
 GROUP BY hire_date
 ORDER BY COUNT(*) DESC
 LIMIT 10;
+
 SELECT hire_date, COUNT(hire_date)
 FROM employees
 GROUP BY hire_date
