@@ -8,4 +8,4 @@ USE employees;
 SELECT first_name, last_name, DATEDIFF(now(), hire_date) AS 'DAYS SINCE HIRED' FROM employees WHERE
 MONTH(birth_date) = 12
 AND DAYOFMONTH(birth_date) = 25
-AND YEAR(hire_date) BETWEEN 1990 AND 1999 LIMIT 5;
+AND YEAR(hire_date) BETWEEN 1990 AND 1999 ORDER BY DATEDIFF(now(), hire_date) DESC LIMIT 5;
