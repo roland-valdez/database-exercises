@@ -17,7 +17,7 @@ SELECT hire_date, COUNT(hire_date)
 FROM employees
 GROUP BY hire_date
 ORDER BY COUNT(hire_date) DESC
-    LIMIT 10;
+LIMIT 10;
 
 SELECT COUNT(gender), gender FROM employees WHERE
     first_name IN ('Irena')
