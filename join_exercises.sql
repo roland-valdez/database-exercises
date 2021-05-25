@@ -36,3 +36,17 @@ JOIN departments AS dpt
 WHERE s.to_date > curdate() AND dm.to_date > curdate();
 # WHERE dm.to_date > curdate();
 # salary has all the m
+
+SELECT CONCAT(e.first_name, ' ', e.last_name) AS 'Employee', d.dept_name AS 'Department'
+FROM employees e
+JOIN dept_emp dpte
+    ON e.emp_no = dpte.emp_no
+JOIN departments d
+    ON dpte.dept_no = d.dept_no
+WHERE dpte.to_date > curdate()
+#   IN (SELECT CONCAT(e.first_name, ' ', e.last_name) AS 'Manager'
+#         FROM employees e
+#         JOIN dept_manager dm
+#             ON e.emp_no = dm.emp_no
+#         WHERE dm.to_date >curdate())
+ORDER BY d.dept_name;
