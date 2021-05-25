@@ -48,3 +48,8 @@ SELECT 'JOIN' AS 'RIGHT JOIN';
 SELECT users.name AS user_name, roles.name AS role_name
 FROM users
 RIGHT JOIN roles ON users.role_id = roles.id;
+
+SELECT 'JOIN COUNT' AS 'JOIN';
+SELECT roles.name AS role_name, COUNT(roles.name)
+FROM users
+RIGHT JOIN roles ON users.role_id = roles.id GROUP BY role_name;
